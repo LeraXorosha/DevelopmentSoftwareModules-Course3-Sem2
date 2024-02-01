@@ -28,19 +28,29 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			components = new System.ComponentModel.Container();
+			myComponent = new MyComponent(components);
 			SuspendLayout();
 			// 
-			// Form1
+			// myComponent
+			// 
+			myComponent.Enabled = false;
+			myComponent.interval = 1000;
+			myComponent.Tick += myComponent_Tick;
+			// 
+			// MyForm
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Name = "Form1";
+			Name = "MyForm";
 			Text = "Form1";
-			Load += Form1_Load;
 			ResumeLayout(false);
 		}
 
 		#endregion
+
+		private MyUserControl1 myUserControl11;
+		private MyComponent myComponent;
 	}
 }
