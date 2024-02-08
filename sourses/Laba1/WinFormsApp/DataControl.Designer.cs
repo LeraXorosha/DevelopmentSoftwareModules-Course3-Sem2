@@ -83,7 +83,6 @@
 			lblID.Size = new Size(22, 20);
 			lblID.TabIndex = 6;
 			lblID.Text = "id";
-			lblID.Click += label1_Click_1;
 			// 
 			// txtFamily
 			// 

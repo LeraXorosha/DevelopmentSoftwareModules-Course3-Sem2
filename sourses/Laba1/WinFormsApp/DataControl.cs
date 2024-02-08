@@ -25,30 +25,30 @@ namespace WinFormsApp
 			set => txtAge.Text = value;
 		}
 
+		public string dataFamily
+		{
+			get => txtFamily.Text;
+			set => txtFamily.Text = value;
+		}
+		public string dataName
+		{
+			get => txtName.Text;
+			set => txtName.Text = value;
+		}
+		public string dataFather
+		{
+			get => txtFather.Text;
+			set => txtFather.Text = value;
+		}
+
+		public event EventHandler DataChanged;
+
+
 		public DataControl()
 		{
 			InitializeComponent();
 		}
 
-		private void label1_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label2_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void textBox2_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label1_Click_1(object sender, EventArgs e)
-		{
-
-		}
 
 		private void btnEdit_Click(object sender, EventArgs e)
 		{
@@ -66,7 +66,11 @@ namespace WinFormsApp
 			if (editForm.DialogResult == DialogResult.OK)
 			{
 				dataAge = editForm.Age;
-				
+				dataFamily = editForm.Family;
+				dataName = editForm.Name;
+				dataFather = editForm.Father;
+
+				DataChanged?.Invoke(this, EventArgs.Empty);
 			}
 		}
 	}
