@@ -14,7 +14,6 @@ namespace WinFormsApp
 	public partial class DataBaseForm : Form
 	{
 		private int counter = 0;
-		private int counterAge = 0;
 		public DataBaseForm()
 		{
 			InitializeComponent();
@@ -50,12 +49,19 @@ namespace WinFormsApp
 
 			flowLayoutPanel1.Controls.Add(newControl);
 
+			newControl.DataRemoved += (sender, e) =>
+			{
+				var count = flowLayoutPanel1.Controls.OfType<DataControl>().Count();
+				txtCount.Text = count.ToString();
+
+					
+			};
 			//txtSumAge.Text = flowLayoutPanel1.Controls.OfType<DataControl>()
 			//		.Sum(x => int.Parse(x.dataAge))
 			//		.ToString();
 		}
 
-
+	
 		private void txtCount_TextChanged(object sender, EventArgs e)
 		{
 			txtCount.Text = counter.ToString();

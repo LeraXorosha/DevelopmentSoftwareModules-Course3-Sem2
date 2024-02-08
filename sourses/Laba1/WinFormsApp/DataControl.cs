@@ -42,6 +42,7 @@ namespace WinFormsApp
 		}
 
 		public event EventHandler DataChanged;
+		public event EventHandler DataRemoved;
 
 
 		public DataControl()
@@ -72,6 +73,12 @@ namespace WinFormsApp
 
 				DataChanged?.Invoke(this, EventArgs.Empty);
 			}
+		}
+
+		private void btnDelete_Click(object sender, EventArgs e)
+		{
+			Parent?.Controls.Remove(this);
+			DataRemoved?.Invoke(this, EventArgs.Empty);
 		}
 	}
 }

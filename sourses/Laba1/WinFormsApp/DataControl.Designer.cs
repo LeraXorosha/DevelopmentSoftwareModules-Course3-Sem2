@@ -56,6 +56,7 @@
 			btnDelete.Text = "Удалить";
 			btnDelete.TextImageRelation = TextImageRelation.ImageAboveText;
 			btnDelete.UseVisualStyleBackColor = false;
+			btnDelete.Click += btnDelete_Click;
 			// 
 			// btnEdit
 			// 
