@@ -28,34 +28,35 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			textBox1 = new TextBox();
-			textBox2 = new TextBox();
+			txtEditId = new TextBox();
+			txtEditFamily = new TextBox();
 			btnSave = new Button();
 			lblEditId = new Label();
 			lblEditFamily = new Label();
 			lblEditName = new Label();
-			textBox3 = new TextBox();
+			txtEditName = new TextBox();
 			lblEditFather = new Label();
-			textBox4 = new TextBox();
+			txtEditFather = new TextBox();
 			lblEditAge = new Label();
-			textBox5 = new TextBox();
+			txtEditAge = new TextBox();
 			SuspendLayout();
 			// 
-			// textBox1
+			// txtEditId
 			// 
-			textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-			textBox1.Location = new Point(244, 28);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(51, 27);
-			textBox1.TabIndex = 0;
+			txtEditId.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			txtEditId.Location = new Point(244, 28);
+			txtEditId.Name = "txtEditId";
+			txtEditId.ReadOnly = true;
+			txtEditId.Size = new Size(51, 27);
+			txtEditId.TabIndex = 0;
 			// 
-			// textBox2
+			// txtEditFamily
 			// 
-			textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-			textBox2.Location = new Point(43, 104);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(252, 27);
-			textBox2.TabIndex = 1;
+			txtEditFamily.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			txtEditFamily.Location = new Point(43, 104);
+			txtEditFamily.Name = "txtEditFamily";
+			txtEditFamily.Size = new Size(252, 27);
+			txtEditFamily.TabIndex = 1;
 			// 
 			// btnSave
 			// 
@@ -69,6 +70,7 @@
 			btnSave.TabIndex = 5;
 			btnSave.Text = "Сохранить";
 			btnSave.UseVisualStyleBackColor = false;
+			btnSave.Click += btnSave_Click;
 			// 
 			// lblEditId
 			// 
@@ -99,13 +101,13 @@
 			lblEditName.TabIndex = 9;
 			lblEditName.Text = "Имя";
 			// 
-			// textBox3
+			// txtEditName
 			// 
-			textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-			textBox3.Location = new Point(43, 176);
-			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(252, 27);
-			textBox3.TabIndex = 8;
+			txtEditName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			txtEditName.Location = new Point(43, 176);
+			txtEditName.Name = "txtEditName";
+			txtEditName.Size = new Size(252, 27);
+			txtEditName.TabIndex = 8;
 			// 
 			// lblEditFather
 			// 
@@ -116,13 +118,13 @@
 			lblEditFather.TabIndex = 11;
 			lblEditFather.Text = "Отчество";
 			// 
-			// textBox4
+			// txtEditFather
 			// 
-			textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-			textBox4.Location = new Point(43, 243);
-			textBox4.Name = "textBox4";
-			textBox4.Size = new Size(252, 27);
-			textBox4.TabIndex = 10;
+			txtEditFather.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			txtEditFather.Location = new Point(43, 243);
+			txtEditFather.Name = "txtEditFather";
+			txtEditFather.Size = new Size(252, 27);
+			txtEditFather.TabIndex = 10;
 			// 
 			// lblEditAge
 			// 
@@ -133,13 +135,13 @@
 			lblEditAge.TabIndex = 13;
 			lblEditAge.Text = "Возраст";
 			// 
-			// textBox5
+			// txtEditAge
 			// 
-			textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-			textBox5.Location = new Point(43, 309);
-			textBox5.Name = "textBox5";
-			textBox5.Size = new Size(252, 27);
-			textBox5.TabIndex = 12;
+			txtEditAge.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			txtEditAge.Location = new Point(43, 309);
+			txtEditAge.Name = "txtEditAge";
+			txtEditAge.Size = new Size(252, 27);
+			txtEditAge.TabIndex = 12;
 			// 
 			// EditData
 			// 
@@ -147,16 +149,16 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(339, 450);
 			Controls.Add(lblEditAge);
-			Controls.Add(textBox5);
+			Controls.Add(txtEditAge);
 			Controls.Add(lblEditFather);
-			Controls.Add(textBox4);
+			Controls.Add(txtEditFather);
 			Controls.Add(lblEditName);
-			Controls.Add(textBox3);
+			Controls.Add(txtEditName);
 			Controls.Add(lblEditFamily);
 			Controls.Add(lblEditId);
 			Controls.Add(btnSave);
-			Controls.Add(textBox2);
-			Controls.Add(textBox1);
+			Controls.Add(txtEditFamily);
+			Controls.Add(txtEditId);
 			Name = "EditData";
 			Text = "EditData";
 			ResumeLayout(false);
@@ -165,16 +167,16 @@
 
 		#endregion
 
-		private TextBox textBox1;
-		private TextBox textBox2;
+		private TextBox txtEditId;
+		private TextBox txtEditFamily;
 		private Button btnSave;
 		private Label lblEditId;
 		private Label lblEditFamily;
 		private Label lblEditName;
-		private TextBox textBox3;
+		private TextBox txtEditName;
 		private Label lblEditFather;
-		private TextBox textBox4;
+		private TextBox txtEditFather;
 		private Label lblEditAge;
-		private TextBox textBox5;
+		private TextBox txtEditAge;
 	}
 }

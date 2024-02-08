@@ -92,6 +92,7 @@
 			txtFamily.MaximumSize = new Size(252, 27);
 			txtFamily.MinimumSize = new Size(252, 27);
 			txtFamily.Name = "txtFamily";
+			txtFamily.ReadOnly = true;
 			txtFamily.Size = new Size(252, 27);
 			txtFamily.TabIndex = 7;
 			// 
@@ -102,6 +103,7 @@
 			txtName.MaximumSize = new Size(172, 27);
 			txtName.MinimumSize = new Size(172, 27);
 			txtName.Name = "txtName";
+			txtName.ReadOnly = true;
 			txtName.Size = new Size(172, 27);
 			txtName.TabIndex = 8;
 			// 
@@ -112,6 +114,7 @@
 			txtFather.MaximumSize = new Size(196, 27);
 			txtFather.MinimumSize = new Size(196, 27);
 			txtFather.Name = "txtFather";
+			txtFather.ReadOnly = true;
 			txtFather.Size = new Size(196, 27);
 			txtFather.TabIndex = 9;
 			// 
@@ -122,6 +125,7 @@
 			txtAge.MaximumSize = new Size(62, 27);
 			txtAge.MinimumSize = new Size(62, 27);
 			txtAge.Name = "txtAge";
+			txtAge.ReadOnly = true;
 			txtAge.Size = new Size(62, 27);
 			txtAge.TabIndex = 10;
 			// 

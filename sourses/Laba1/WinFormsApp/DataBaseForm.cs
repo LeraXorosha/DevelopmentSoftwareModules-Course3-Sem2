@@ -31,6 +31,7 @@ namespace WinFormsApp
 			set => txtCount.Text = value;
 		}
 
+
 		private void btnFormAdd_Click(object sender, EventArgs e)
 		{
 			counter++;

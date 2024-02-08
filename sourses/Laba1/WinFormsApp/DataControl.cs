@@ -19,6 +19,12 @@ namespace WinFormsApp
 			set => lblID.Text = value;
 		}
 
+		public string dataAge
+		{
+			get => txtAge.Text;
+			set => txtAge.Text = value;
+		}
+
 		public DataControl()
 		{
 			InitializeComponent();
@@ -46,8 +52,22 @@ namespace WinFormsApp
 
 		private void btnEdit_Click(object sender, EventArgs e)
 		{
-			EditData editForm = new EditData();
-			editForm.Show();
+			EditData editForm = new EditData()
+			{
+				Family = txtFamily.Text,
+				Name = txtName.Text,
+				Father = txtFather.Text,
+				Age = txtAge.Text,
+				saveID = lblID.Text
+
+			};
+			editForm.ShowDialog();
+
+			if (editForm.DialogResult == DialogResult.OK)
+			{
+				dataAge = editForm.Age;
+				
+			}
 		}
 	}
 }
