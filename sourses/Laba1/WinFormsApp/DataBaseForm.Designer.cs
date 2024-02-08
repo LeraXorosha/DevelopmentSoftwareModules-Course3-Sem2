@@ -81,8 +81,10 @@
 			txtCount.MaximumSize = new Size(125, 27);
 			txtCount.MinimumSize = new Size(125, 27);
 			txtCount.Name = "txtCount";
+			txtCount.ReadOnly = true;
 			txtCount.Size = new Size(125, 27);
 			txtCount.TabIndex = 4;
+			txtCount.TextChanged += txtCount_TextChanged;
 			// 
 			// txtSumAge
 			// 
@@ -91,6 +93,7 @@
 			txtSumAge.MaximumSize = new Size(125, 27);
 			txtSumAge.MinimumSize = new Size(125, 27);
 			txtSumAge.Name = "txtSumAge";
+			txtSumAge.ReadOnly = true;
 			txtSumAge.Size = new Size(125, 27);
 			txtSumAge.TabIndex = 5;
 			// 

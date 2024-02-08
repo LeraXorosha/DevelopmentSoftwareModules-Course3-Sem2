@@ -71,6 +71,7 @@
 			btnEdit.TabIndex = 4;
 			btnEdit.Text = "Изменить";
 			btnEdit.UseVisualStyleBackColor = false;
+			btnEdit.Click += btnEdit_Click;
 			// 
 			// lblID
 			// 

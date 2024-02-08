@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace WinFormsApp
 {
@@ -41,6 +42,12 @@ namespace WinFormsApp
 		private void label1_Click_1(object sender, EventArgs e)
 		{
 
+		}
+
+		private void btnEdit_Click(object sender, EventArgs e)
+		{
+			EditData editForm = new EditData();
+			editForm.Show();
 		}
 	}
 }

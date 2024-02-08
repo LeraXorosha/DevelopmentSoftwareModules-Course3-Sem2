@@ -24,14 +24,26 @@ namespace WinFormsApp
 		{
 
 		}
-		
+
+		public string CountData
+		{
+			get => txtCount.Text;
+			set => txtCount.Text = value;
+		}
 
 		private void btnFormAdd_Click(object sender, EventArgs e)
 		{
-			counter  ++;
+			counter++;
 			var newControl = new DataControl();
 			flowLayoutPanel1.Controls.Add(newControl);
 			newControl.LabelId = $"{counter}";
+
+			txtCount.Text = counter.ToString();
+		}
+
+		private void txtCount_TextChanged(object sender, EventArgs e)
+		{
+			txtCount.Text = counter.ToString();
 		}
 	}
 }
