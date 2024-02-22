@@ -21,7 +21,17 @@ namespace WinFormsApp.Database.Entity
             set => _password = value.ToHash();
         }
 
-        public static implicit operator string (UserPassword password) => password.Password;
+        public static bool operator == (UserPassword left, UserPassword right)
+        {
+            if (left is null || right is null) return false;
+            return left._password == right._password;
+        }
+		public static bool operator !=(UserPassword left, UserPassword right)
+		{
+			return !(left == right);
+		}
+
+		public static implicit operator string (UserPassword password) => password.Password;
 		public static implicit operator UserPassword(string password) => new() { Password = password };
 
 	}

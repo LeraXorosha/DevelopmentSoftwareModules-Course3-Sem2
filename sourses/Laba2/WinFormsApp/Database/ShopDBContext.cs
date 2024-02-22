@@ -11,20 +11,12 @@ namespace WinFormsApp.Database
 {
     internal class ShopDBContext : DbContext
     {
-        private static string _connectionString = "Data sourse=./Shop.db";
-        public DbSet<User> Users { get; set; }
-
-        protected ShopDBContext()
-        {
+		public ShopDBContext(DbContextOptions options) : base(options)
+		{
 			//Database.EnsureDeleted();
 			Database.EnsureCreated();
 		}
-
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseSqlite(connectionString: _connectionString);
-		}
+		public DbSet<User> Users { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

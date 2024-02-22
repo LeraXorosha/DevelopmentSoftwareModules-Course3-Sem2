@@ -30,42 +30,57 @@
 		{
 			btnLogMain = new Button();
 			btnRegistr = new Button();
+			lblWel = new Label();
 			SuspendLayout();
 			// 
 			// btnLogMain
 			// 
-			btnLogMain.Location = new Point(630, 28);
+			btnLogMain.Location = new Point(105, 141);
 			btnLogMain.Name = "btnLogMain";
-			btnLogMain.Size = new Size(94, 29);
+			btnLogMain.Size = new Size(133, 47);
 			btnLogMain.TabIndex = 0;
 			btnLogMain.Text = "Login";
 			btnLogMain.UseVisualStyleBackColor = true;
-
+			btnLogMain.Click += btnLogMain_Click;
 			// 
 			// btnRegistr
 			// 
-			btnRegistr.Location = new Point(630, 63);
+			btnRegistr.Location = new Point(283, 141);
 			btnRegistr.Name = "btnRegistr";
-			btnRegistr.Size = new Size(94, 29);
+			btnRegistr.Size = new Size(133, 47);
 			btnRegistr.TabIndex = 1;
 			btnRegistr.Text = "Registration";
 			btnRegistr.UseVisualStyleBackColor = true;
+			btnRegistr.Click += btnRegistr_Click;
+			// 
+			// lblWel
+			// 
+			lblWel.AutoSize = true;
+			lblWel.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+			lblWel.Location = new Point(105, 76);
+			lblWel.Name = "lblWel";
+			lblWel.Size = new Size(308, 34);
+			lblWel.TabIndex = 2;
+			lblWel.Text = "Welcome to the system))";
 			// 
 			// MainForm
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(520, 274);
+			Controls.Add(lblWel);
 			Controls.Add(btnRegistr);
 			Controls.Add(btnLogMain);
 			Name = "MainForm";
 			Text = "Form1";
 			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
 
 		private Button btnLogMain;
 		private Button btnRegistr;
+		private Label lblWel;
 	}
 }
