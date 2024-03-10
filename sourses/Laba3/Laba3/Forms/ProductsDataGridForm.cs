@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Laba3.Services.Interfaces;
+using Laba3.Database.Entity;
 
 namespace Laba3
 {
@@ -30,19 +31,21 @@ namespace Laba3
 
 		private void ProductsDataGridForm_Load(object sender, EventArgs e)
 		{
-			dataGridProducts.DataSource = _dbWorker.Products;
+			//dataGridProducts.DataSource = _dbWorker.Products;
 
-			//var productsQuery = from p in _dbWorker.Products
-			//					select new
-			//					{
-			//						p.Id,
-			//						p.Name,
-			//						p.Price,
+			var productsQuery = from p in _dbWorker.Products join Material in _dbWorker.Materials on p.MaterialId equals Material.Id
+								select new
+								{
+									p.Id,
+									p.Name,
+									p.Price,
+									MaterialName = Material.Name
 
-			//						MaterialName = p.Material.Name
-			//					};
-			//dataGridProducts.DataSource = productsQuery.ToList();
-			//dataGridProducts.Refresh();
+									
+								};
+								
+			dataGridProducts.DataSource = productsQuery.ToList();
+			dataGridProducts.Refresh();
 
 		}
 	}

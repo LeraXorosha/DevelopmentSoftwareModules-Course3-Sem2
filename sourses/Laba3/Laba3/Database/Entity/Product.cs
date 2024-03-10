@@ -16,6 +16,6 @@ namespace Laba3.Database.Entity
 
 		[ForeignKey("MaterialId")]
 		public int MaterialId { get; set; }
-		public virtual Material Material { get; set; }
+		//public virtual Material Material { get; set; }
 	}
 }
