@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Laba3.Services.Implementations;
+using Laba3.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +9,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Laba3.Services.Interfaces;
 
 namespace Laba3
 {
-	public partial class ProductsDataGridForm : Form
+	internal partial class ProductsDataGridForm : Form
 	{
-		public ProductsDataGridForm()
+		private readonly IDbWorker _dbWorker;
+		public ProductsDataGridForm(IDbWorker dbWorker)
 		{
 			InitializeComponent();
+			_dbWorker = dbWorker;
+		}
+
+		private void btnSaveProducts_Click(object sender, EventArgs e)
+		{
+			_dbWorker.SaveChanges();
+			MessageBox.Show("Сохранено");
+		}
+
+		private void ProductsDataGridForm_Load(object sender, EventArgs e)
+		{
+			dataGridProducts.DataSource = _dbWorker.Products;
+
+			//var productsQuery = from p in _dbWorker.Products
+			//					select new
+			//					{
+			//						p.Id,
+			//						p.Name,
+			//						p.Price,
+
+			//						MaterialName = p.Material.Name
+			//					};
+			//dataGridProducts.DataSource = productsQuery.ToList();
+			//dataGridProducts.Refresh();
+
 		}
 	}
 }

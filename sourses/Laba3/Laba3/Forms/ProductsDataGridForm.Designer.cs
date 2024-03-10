@@ -28,19 +28,19 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			dataGridView1 = new DataGridView();
+			dataGridProducts = new DataGridView();
 			btnSaveProducts = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dataGridProducts).BeginInit();
 			SuspendLayout();
 			// 
-			// dataGridView1
+			// dataGridProducts
 			// 
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(30, 116);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(1067, 443);
-			dataGridView1.TabIndex = 0;
+			dataGridProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridProducts.Location = new Point(30, 116);
+			dataGridProducts.Name = "dataGridProducts";
+			dataGridProducts.RowHeadersWidth = 51;
+			dataGridProducts.Size = new Size(1067, 443);
+			dataGridProducts.TabIndex = 0;
 			// 
 			// btnSaveProducts
 			// 
@@ -51,6 +51,7 @@
 			btnSaveProducts.TabIndex = 1;
 			btnSaveProducts.Text = "Save";
 			btnSaveProducts.UseVisualStyleBackColor = true;
+			btnSaveProducts.Click += btnSaveProducts_Click;
 			// 
 			// ProductsDataGridForm
 			// 
@@ -58,16 +59,17 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(1127, 591);
 			Controls.Add(btnSaveProducts);
-			Controls.Add(dataGridView1);
+			Controls.Add(dataGridProducts);
 			Name = "ProductsDataGridForm";
 			Text = "ProductsDataGridForm";
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			Load += ProductsDataGridForm_Load;
+			((System.ComponentModel.ISupportInitialize)dataGridProducts).EndInit();
 			ResumeLayout(false);
 		}
 
 		#endregion
 
-		private DataGridView dataGridView1;
+		private DataGridView dataGridProducts;
 		private Button btnSaveProducts;
 	}
 }

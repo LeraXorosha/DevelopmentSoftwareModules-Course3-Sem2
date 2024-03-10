@@ -26,7 +26,7 @@ namespace Laba3
 		private void MaterialsDataGridForm_Load(object sender, EventArgs e)
 		{
 			dataGridMaterials.DataSource = _dbWorker.Materials;
-			//dataGridMaterials.Columns["Products"].Visible = false;
+			
 		}
 
 		private void btnOpenMaterials_Click(object sender, EventArgs e)
