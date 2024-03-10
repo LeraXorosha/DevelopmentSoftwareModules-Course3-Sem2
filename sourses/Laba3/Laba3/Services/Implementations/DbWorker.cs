@@ -1,4 +1,5 @@
 ﻿using Laba3.Database;
+using Laba3.Database.Entity;
 using Laba3.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,6 +18,10 @@ namespace Laba3.Services.Implementations
 		{
 			_dbContext = dbContext;
 		}
+
+		public IEnumerable<Material> Materials => _dbContext.Materials.ToList();
+		public IEnumerable<Product> Products => _dbContext.Products.ToList();
+		public void SaveChanges() => _dbContext.SaveChanges();
 	}
 		
 }

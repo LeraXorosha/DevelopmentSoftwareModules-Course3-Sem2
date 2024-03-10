@@ -28,19 +28,19 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			dataGridView1 = new DataGridView();
+			dataGridMaterials = new DataGridView();
 			btnOpenMaterials = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dataGridMaterials).BeginInit();
 			SuspendLayout();
 			// 
-			// dataGridView1
+			// dataGridMaterials
 			// 
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(30, 116);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.Size = new Size(1067, 443);
-			dataGridView1.TabIndex = 0;
+			dataGridMaterials.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridMaterials.Location = new Point(30, 116);
+			dataGridMaterials.Name = "dataGridMaterials";
+			dataGridMaterials.RowHeadersWidth = 51;
+			dataGridMaterials.Size = new Size(1067, 443);
+			dataGridMaterials.TabIndex = 0;
 			// 
 			// btnOpenMaterials
 			// 
@@ -51,6 +51,7 @@
 			btnOpenMaterials.TabIndex = 1;
 			btnOpenMaterials.Text = "Save";
 			btnOpenMaterials.UseVisualStyleBackColor = true;
+			btnOpenMaterials.Click += btnOpenMaterials_Click;
 			// 
 			// MaterialsDataGridForm
 			// 
@@ -58,16 +59,17 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(1127, 591);
 			Controls.Add(btnOpenMaterials);
-			Controls.Add(dataGridView1);
+			Controls.Add(dataGridMaterials);
 			Name = "MaterialsDataGridForm";
 			Text = "MaterialsDataGridForm";
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			Load += MaterialsDataGridForm_Load;
+			((System.ComponentModel.ISupportInitialize)dataGridMaterials).EndInit();
 			ResumeLayout(false);
 		}
 
 		#endregion
 
-		private DataGridView dataGridView1;
+		private DataGridView dataGridMaterials;
 		private Button btnOpenMaterials;
 	}
 }

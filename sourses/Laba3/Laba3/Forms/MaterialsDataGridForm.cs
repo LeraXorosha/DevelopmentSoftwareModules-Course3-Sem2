@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Laba3
 {
-	public partial class MaterialsDataGridForm : Form
+	internal partial class MaterialsDataGridForm : Form
 	{
 		private readonly IDbWorker _dbWorker;
 
@@ -19,6 +19,20 @@ namespace Laba3
 		{
 			InitializeComponent();
 			_dbWorker = dbWorker;
+		}
+
+
+
+		private void MaterialsDataGridForm_Load(object sender, EventArgs e)
+		{
+			dataGridMaterials.DataSource = _dbWorker.Materials;
+			//dataGridMaterials.Columns["Products"].Visible = false;
+		}
+
+		private void btnOpenMaterials_Click(object sender, EventArgs e)
+		{
+			_dbWorker.SaveChanges();
+			MessageBox.Show("Сохранено");
 		}
 	}
 }

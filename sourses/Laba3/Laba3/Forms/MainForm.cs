@@ -17,5 +17,11 @@ namespace Laba3
 			MaterialsDataGridForm materialsGrid = _serviceProvider.GetRequiredService<MaterialsDataGridForm>();
 			materialsGrid.Show();
 		}
+
+		private void btnOpenProducts_Click(object sender, EventArgs e)
+		{
+			ProductsDataGridForm productsGrid = _serviceProvider.GetRequiredService<ProductsDataGridForm>();
+			productsGrid.Show();
+		}
 	}
 }

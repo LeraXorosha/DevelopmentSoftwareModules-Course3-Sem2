@@ -52,6 +52,7 @@
 			btnOpenProducts.TabIndex = 1;
 			btnOpenProducts.Text = "Open products";
 			btnOpenProducts.UseVisualStyleBackColor = true;
+			btnOpenProducts.Click += this.btnOpenProducts_Click;
 			// 
 			// MainForm
 			// 
