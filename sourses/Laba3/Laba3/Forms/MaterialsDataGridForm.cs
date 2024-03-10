@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laba3.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Laba3
 {
 	public partial class MaterialsDataGridForm : Form
 	{
-		public MaterialsDataGridForm()
+		private readonly IDbWorker _dbWorker;
+
+		public MaterialsDataGridForm(IDbWorker dbWorker)
 		{
 			InitializeComponent();
+			_dbWorker = dbWorker;
 		}
 	}
 }

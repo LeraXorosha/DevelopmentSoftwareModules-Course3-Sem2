@@ -41,6 +41,7 @@
 			btnOpenMaterials.TabIndex = 0;
 			btnOpenMaterials.Text = "Open materials ";
 			btnOpenMaterials.UseVisualStyleBackColor = true;
+			btnOpenMaterials.Click += btnOpenMaterials_Click;
 			// 
 			// btnOpenProducts
 			// 

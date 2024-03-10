@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laba3.Services.Interfaces
 {
-	internal interface IDbWorker
+	public interface IDbWorker
 	{
 	}
 }
