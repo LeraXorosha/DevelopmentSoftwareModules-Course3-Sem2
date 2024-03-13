@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Laba3.Database.Entity
 {
-	class Product
+	public class Product
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
@@ -16,6 +16,6 @@ namespace Laba3.Database.Entity
 
 		[ForeignKey("MaterialId")]
 		public int MaterialId { get; set; }
-		//public virtual Material Material { get; set; }
+		public virtual Material Material { get; set; }
 	}
 }

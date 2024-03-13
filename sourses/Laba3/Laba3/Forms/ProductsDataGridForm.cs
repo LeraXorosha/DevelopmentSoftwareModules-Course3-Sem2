@@ -33,15 +33,14 @@ namespace Laba3
 		{
 			//dataGridProducts.DataSource = _dbWorker.Products;
 
-			var productsQuery = from p in _dbWorker.Products join Material in _dbWorker.Materials on p.MaterialId equals Material.Id
+			var productsQuery = from p in _dbWorker.Products 
+								join Material in _dbWorker.Materials on p.MaterialId equals Material.Id
 								select new
 								{
 									p.Id,
 									p.Name,
 									p.Price,
 									MaterialName = Material.Name
-
-									
 								};
 								
 			dataGridProducts.DataSource = productsQuery.ToList();

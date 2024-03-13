@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using Laba3.Database;
 using Laba3.Services.Implementations;
+using Laba3.Forms;
 
 
 namespace Laba3
@@ -21,8 +22,13 @@ namespace Laba3
 			services.AddTransient<MainForm>();
 			services.AddTransient<MaterialsDataGridForm>();
 			services.AddTransient<ProductsDataGridForm>();
+			services.AddTransient<MaterialsCustomForm>();
+			services.AddTransient<ProductsCustomForm>();
+
 			services.AddScoped<IDbWorker, DbWorker>();
+			
 			services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data source=./app.db"));
+			
 			_serviceProvider = services.BuildServiceProvider();
 
 

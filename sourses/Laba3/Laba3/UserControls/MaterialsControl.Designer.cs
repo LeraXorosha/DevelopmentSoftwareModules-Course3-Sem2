@@ -78,6 +78,7 @@
 			btnProductsMaterial.TabIndex = 4;
 			btnProductsMaterial.Text = "view";
 			btnProductsMaterial.UseVisualStyleBackColor = false;
+			btnProductsMaterial.Click += btnProductsMaterial_Click;
 			// 
 			// lblProductsMaterial
 			// 
