@@ -26,7 +26,7 @@ namespace Laba3
 		private void MaterialsDataGridForm_Load(object sender, EventArgs e)
 		{
 			dataGridMaterials.DataSource = _dbWorker.Materials;
-			
+
 		}
 
 		private void btnOpenMaterials_Click(object sender, EventArgs e)
@@ -34,5 +34,6 @@ namespace Laba3
 			_dbWorker.SaveChanges();
 			MessageBox.Show("Сохранено");
 		}
+
 	}
 }

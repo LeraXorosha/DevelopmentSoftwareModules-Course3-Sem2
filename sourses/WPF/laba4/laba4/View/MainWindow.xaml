@@ -1,0 +1,20 @@
+﻿<Window x:Class="laba4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       
+        xmlns:local="clr-namespace:laba4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Open Materials" FontSize="20" HorizontalAlignment="Left" Height="123" Margin="86,94,0,0" VerticalAlignment="Top" Width="202" Click="btn_open_materials"/>
+        <Button Content="Open Product" FontSize="20" HorizontalAlignment="Left" Height="123" Margin="318,94,0,0" VerticalAlignment="Top" Width="202" Click="btn_open_products" Grid.ColumnSpan="2"/>
+        <Button Content="Open materials &#xD;&#xA;custom"  FontSize="20" HorizontalAlignment="Left" Height="123" Margin="86,242,0,0" VerticalAlignment="Top" Width="202" Click="btn_open_custom_materials"/>
+        <Button Content="Open products &#xD;&#xA;custom"  FontSize="20" Height="123" Margin="318,242,80,0" VerticalAlignment="Top" Click="btn_open_custom_products" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
