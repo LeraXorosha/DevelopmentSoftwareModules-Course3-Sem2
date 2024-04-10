@@ -1,6 +1,7 @@
 ﻿using laba4.Model.Database.Entity;
 using laba4.Services.Implementations;
 using laba4.Services.Interfaces;
+using laba4.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +39,10 @@ namespace laba4.View
 		public MaterialDataGridWindow(IDbWorker dbWorker)
 		{
 			InitializeComponent();
-			this.DataContext = dbWorker.Materials;
+			DataContext = new MaterialDGViewModel()
+			{
+				Materials = dbWorker.Materials.ToList(),
+			};
 		}
 
 		private void btn_save_materials(object sender, RoutedEventArgs e)

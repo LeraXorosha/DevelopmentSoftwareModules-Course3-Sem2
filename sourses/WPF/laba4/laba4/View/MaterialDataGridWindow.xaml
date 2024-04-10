@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:laba4.View"
         xmlns:Models = "clr-namespace:laba4.Model.Database.Entity"
+        xmlns:ViewModels = "clr-namespace:laba4.ViewModels"
         mc:Ignorable="d"
         Title="MaterialDataGridWindow" Height="450" Width="334">
+    <Window.DataContext>
+        <ViewModels:MaterialDGViewModel />
+    </Window.DataContext>
     <Grid>
         <Button Content="Save" HorizontalAlignment="Left" Margin="17,25,0,0" VerticalAlignment="Top" Width="55" Click="btn_save_materials"/>
         <DataGrid ItemsSource ="{Binding Materials}" Margin="17,65,19,30" RenderTransformOrigin="0.5,0.5" FontSize="15">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}" Width="90" />
-                <DataGridHyperlinkColumn Header="Material" Binding="{Binding Path=Name}" Width="200" />
+                <DataGridTextColumn Header="Material" Binding="{Binding Path=Name}" Width="200" />
            
             </DataGrid.Columns>
         </DataGrid>
