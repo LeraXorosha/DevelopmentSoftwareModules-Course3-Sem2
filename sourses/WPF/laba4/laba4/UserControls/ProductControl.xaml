@@ -3,10 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Models = "clr-namespace:laba4.Model.Database.Entity"
+             xmlns:ViewModels= "clr-namespace:laba4.ViewModels"
              xmlns:local="clr-namespace:laba4.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             mc:Ignorable="d" Background="White" Height="109" Width="773">
+    <UserControl.DataContext>
+        <ViewModels:ProductViewModel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Border BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+        
+        <Grid HorizontalAlignment="Center" Width="765" Margin="0,0,0,10">
+        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+        
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0"
+                Content="Id" />
+
+            <TextBox Grid.Row="1" Grid.Column="0"
+                     TextWrapping="Wrap" 
+                     Text="{Binding Product.Id}"
+                     d:Text="example"/>
+        
+            <Label Grid.Row="0" Grid.Column="1"
+                   Content="Name"/>
+        
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     TextWrapping="Wrap" Text="{Binding Product.Name}"/>
+
+            <Label  Grid.Row="0" Grid.Column="2"
+                    Content="Price"  />
+
+            <TextBox  Grid.Row="1" Grid.Column="2"
+                      TextWrapping="Wrap" Text="{Binding Product.Price}"  />
+
+            <Label Grid.Row="0" Grid.Column="3"
+                   Content="Material"  />
+
+            <ComboBox  Grid.Row="1" Grid.Column="3"
+                      ItemsSource="{Binding Materials}"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="Id"
+                      SelectedItem="{Binding Product.Material}"
+                      SelectedValue="{Binding Product.MaterialId}"/>
+
+        </Grid>
+    </Border>
 </UserControl>

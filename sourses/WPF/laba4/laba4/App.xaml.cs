@@ -7,6 +7,7 @@ using System.Windows;
 using laba4.View;
 using laba4.Services.Implementations;
 using laba4.Services.Interfaces;
+using laba4.UserControls;
 
 namespace laba4
 {
@@ -17,8 +18,12 @@ namespace laba4
 	{		
 		private void ConfigureServices(IServiceCollection services)
 		{
-			services.AddSingleton<MainWindow>();
-			services.AddSingleton<MaterialDataGridWindow>();
+			services.AddTransient<MainWindow>();
+			services.AddTransient<MaterialDataGridWindow>();
+			services.AddTransient<ProductDataGridWindow>();
+			services.AddTransient<MaterialCustomWindow>();
+			services.AddTransient<ProductCustomWindow>();
+
 
 			services.AddScoped<IDbWorker, DbWorker>();
 			services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data source=./app.db"));
@@ -30,7 +35,7 @@ namespace laba4
 			var serviceCollection = new ServiceCollection();
 			ConfigureServices(serviceCollection);
 			var serviceProvider = serviceCollection.BuildServiceProvider();
-			var MinWindow = serviceProvider.GetRequiredService<MainWindow>(); ; //тут вызвать окно черз сервис провайдер
+			var MinWindow = serviceProvider.GetRequiredService<MainWindow>(); 
 			MinWindow.Show();
 		}
 	}

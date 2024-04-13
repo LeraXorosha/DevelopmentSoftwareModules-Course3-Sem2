@@ -1,5 +1,4 @@
-﻿using laba4.Model.Database.Entity;
-using laba4.Services.Implementations;
+﻿using laba4.Services.Implementations;
 using laba4.Services.Interfaces;
 using laba4.ViewModels;
 using System;
@@ -19,21 +18,20 @@ using System.Windows.Shapes;
 namespace laba4.View
 {
 	/// <summary>
-	/// Логика взаимодействия для MaterialDataGridWindow.xaml
+	/// Логика взаимодействия для ProductDataGridWindow.xaml
 	/// </summary>
-	public partial class MaterialDataGridWindow : Window
+	public partial class ProductDataGridWindow : Window
 	{
 		public event EventHandler SaveBtnClicked = null!;
 
-		public MaterialDataGridWindow()
+		public ProductDataGridWindow(IDbWorker dbWorker)
 		{
 			InitializeComponent();
 		}
 
-		private void btn_save_materials(object sender, RoutedEventArgs e)
+		private void btn_save_product(object sender, RoutedEventArgs e)
 		{
 			SaveBtnClicked?.Invoke(this, EventArgs.Empty);
 		}
-
     }
 }

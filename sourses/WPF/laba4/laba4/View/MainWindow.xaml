@@ -13,8 +13,8 @@
             <ColumnDefinition Width="79*"/>
         </Grid.ColumnDefinitions>
         <Button Content="Open Materials" FontSize="20" HorizontalAlignment="Left" Height="123" Margin="86,94,0,0" VerticalAlignment="Top" Width="202" Click="btn_open_materials"/>
-        <Button Content="Open Product" FontSize="20" HorizontalAlignment="Left" Height="123" Margin="318,94,0,0" VerticalAlignment="Top" Width="202" Click="btn_open_products" Grid.ColumnSpan="2"/>
+        <Button Content="Open Product" FontSize="20" HorizontalAlignment="Left" Height="123" Margin="319,94,0,0" VerticalAlignment="Top" Width="202" Click="btn_open_products" Grid.ColumnSpan="2"/>
         <Button Content="Open materials &#xD;&#xA;custom"  FontSize="20" HorizontalAlignment="Left" Height="123" Margin="86,242,0,0" VerticalAlignment="Top" Width="202" Click="btn_open_custom_materials"/>
-        <Button Content="Open products &#xD;&#xA;custom"  FontSize="20" Height="123" Margin="318,242,80,0" VerticalAlignment="Top" Click="btn_open_custom_products" Grid.ColumnSpan="2"/>
+        <Button Content="Open products &#xD;&#xA;custom"  FontSize="20" Height="123" Margin="318,242,64,0" VerticalAlignment="Top" Click="btn_open_custom_products" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

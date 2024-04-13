@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ViewModels = "clr-namespace:laba4.ViewModels"
+             xmlns:Models = "clr-namespace:laba4.Model.Database.Entity"
              xmlns:local="clr-namespace:laba4.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             xmlns:UserControls = "clr-namespace:laba4.UserControls"
+             mc:Ignorable="d" Height="90" Background="White" Width="380">
+
+    <UserControl.DataContext>
+        <Models:Material/>
+    </UserControl.DataContext>
+    
+    <Grid HorizontalAlignment="Center" Width="381">
+        
+        <Label Content="Id" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="34" Width="97" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,44,0,0" TextWrapping="Wrap" Text="{Binding Id}" VerticalAlignment="Top" Width="61" FontSize="15"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Height="34" Width="97" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Margin="100,44,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="150" FontSize="15"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="34" Width="97" FontSize="15"/>
+        <Label Content="Products" HorizontalAlignment="Left" Margin="280,8,0,0" VerticalAlignment="Top" Height="34" Width="97" FontSize="15"/>
+        <Button Content="View" HorizontalAlignment="Left" Margin="280,42,0,0" VerticalAlignment="Top" FontSize="15" Width="72" Click="ViewModel_BtnProducts_Click"/>
+
     </Grid>
 </UserControl>

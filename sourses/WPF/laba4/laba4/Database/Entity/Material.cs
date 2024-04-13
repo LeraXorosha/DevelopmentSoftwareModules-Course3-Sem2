@@ -12,4 +12,5 @@ namespace laba4.Model.Database.Entity
 		public string Name { get; set; }
 		public virtual IEnumerable<Product> Products { get; set; }
 	}
+
 }

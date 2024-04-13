@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace laba4.ViewModels
 {
-	internal class MaterialDGViewModel
+	internal class MaterialsViewModel
 	{
-		public List<Material> Materials { get; set; }
+		public List<Material> Materials { get; set; } = null!;
 	}
 }
