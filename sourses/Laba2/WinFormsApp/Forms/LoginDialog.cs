@@ -33,7 +33,7 @@ namespace WinFormsApp.Forms
 			switch (result)
 			{
 				case LoginErrors.Success:
-					DialogResult = DialogResult.OK;
+					DialogResult = DialogResult.OK;	
 					Close();
 					return;
 				case LoginErrors.LoginIncorrect:
