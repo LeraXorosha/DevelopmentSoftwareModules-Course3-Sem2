@@ -49,10 +49,10 @@
         </StackPanel>
 
         <Button Grid.Column="0" Grid.Row="1" Content="Show in new Window" Click="Show_in_new_window"/>
-        <Button Grid.Column="0" Grid.Row="1" Content="Push new Item" Click="Push_new_Item" Height="40" Margin="0,39,0,0" Grid.RowSpan="3" VerticalAlignment="Top"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Push new Item" Click="Push_new_Item"/>
         <Button Grid.Column="1" Grid.Row="1" Content="Change selected Item" Click="Change_selected_Item"/>
-        <Button Grid.Column="1" Grid.Row="1" Content="Pop last Item" Click="Pop_last_Item" Height="40" Margin="0,39,0,0" Grid.RowSpan="3" VerticalAlignment="Top"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Pop last Item" Click="Pop_last_Item" />
         <Button Grid.Column="0" Grid.Row="3" Content="Begin process"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="Reset process" Height="40" Margin="0,39,0,0" Grid.RowSpan="3" VerticalAlignment="Top"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Reset process"/>
     </Grid>
 </Window>

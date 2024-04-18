@@ -14,7 +14,9 @@ namespace Laba6.ViewModels
 		public PersonModelSimple ChosenPerson{ get => _person; set => _person = value; }
 
 
-		public PeopleViewModelSimple() {
+
+		public PeopleViewModelSimple()
+		{
 			People = new List<PersonModelSimple>
 			{
 				new PersonModelSimple{Id = 1, Name = "Valeria", Description="Student", DateBorn=new DateTime(2005,02,26)},
@@ -23,9 +25,7 @@ namespace Laba6.ViewModels
 				new PersonModelSimple{Id = 4, Name = "Anastasia", Description="Teacher", DateBorn=new DateTime(1987,02,06)},
 				new PersonModelSimple{Id = 5, Name = "Elena", Description="Couch", DateBorn=new DateTime(1974,04,13)},
 			};
-
-			
-		
 		}
 	}
+	
 }

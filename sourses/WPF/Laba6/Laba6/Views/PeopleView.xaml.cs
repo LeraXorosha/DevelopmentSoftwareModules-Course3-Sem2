@@ -13,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Laba6.ViewModels;
+using Laba6.Models;
 namespace Laba6.Views
 {
 	/// <summary>
@@ -36,20 +36,21 @@ namespace Laba6.Views
 		private void Show_in_new_window(object sender, RoutedEventArgs e)
 		{
 			PeopleView view = _serviceProvider.GetRequiredService<PeopleView>();
-			view.DataContext = new PeopleViewModelSimple();
+			view.DataContext = this.DataContext;
 			view.Show();
 		}
 
 		private void Push_new_Item(object sender, RoutedEventArgs e)
 		{
-
+			_peopleViewModel.People.Add(new PersonModelSimple());
 		}
 
 
 
 		private void Pop_last_Item(object sender, RoutedEventArgs e)
 		{
-
+			var count = _peopleViewModel.People.Count;
+			if (count > 0) _peopleViewModel.People.RemoveAt(count - 1);
 		}
 
 		private void Change_selected_Item(object sender, RoutedEventArgs e)
