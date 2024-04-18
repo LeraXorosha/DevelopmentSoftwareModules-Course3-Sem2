@@ -27,8 +27,11 @@ namespace Laba6
 				
 		protected override void OnStartup(StartupEventArgs e)
 		{
+			//PeopleView view = _serviceProvider.GetRequiredService<PeopleView>();
+			//view.DataContext = new PeopleViewModelSimple();
+			//view.Show();
 			PeopleView view = _serviceProvider.GetRequiredService<PeopleView>();
-			view.DataContext = new PeopleViewModelSimple();
+			view.DataContext = new PeopleViewModelMVVM();
 			view.Show();
 		}
 	}

@@ -22,7 +22,8 @@ namespace Laba6.Views
 	public partial class PeopleView : Window
 	{
 		private readonly IServiceProvider _serviceProvider;
-		private PeopleViewModelSimple _peopleViewModel = null!;
+		//private PeopleViewModelSimple _peopleViewModel = null!;
+		private PeopleViewModelMVVM _peopleViewModelMVVM = null!;
 		public PeopleView(IServiceProvider serviceProvider)
 		{
 			InitializeComponent();
@@ -30,7 +31,8 @@ namespace Laba6.Views
 		}
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
-			_peopleViewModel = (PeopleViewModelSimple)this.DataContext;
+			//_peopleViewModel = (PeopleViewModelSimple)this.DataContext;
+			_peopleViewModelMVVM = (PeopleViewModelMVVM)this.DataContext;
 		}
 
 		private void Show_in_new_window(object sender, RoutedEventArgs e)
@@ -42,20 +44,24 @@ namespace Laba6.Views
 
 		private void Push_new_Item(object sender, RoutedEventArgs e)
 		{
-			_peopleViewModel.People.Add(new PersonModelSimple());
+			//_peopleViewModel.People.Add(new PersonModelSimple());
+			_peopleViewModelMVVM.People.Add(new PersonModelMVVM());
 		}
 
 
 
 		private void Pop_last_Item(object sender, RoutedEventArgs e)
 		{
-			var count = _peopleViewModel.People.Count;
-			if (count > 0) _peopleViewModel.People.RemoveAt(count - 1);
+			//var count = _peopleViewModel.People.Count;
+			//if (count > 0) _peopleViewModel.People.RemoveAt(count - 1);
+			var count = _peopleViewModelMVVM.People.Count;
+			if (count > 0) _peopleViewModelMVVM.People.RemoveAt(count - 1);
 		}
 
 		private void Change_selected_Item(object sender, RoutedEventArgs e)
 		{
-			var person = _peopleViewModel.ChosenPerson;
+			//var person = _peopleViewModel.ChosenPerson;
+			var person = _peopleViewModelMVVM.ChosenPerson;
 			person.Id = 1;
 			person.Name = "QUEEN";
 			person.Description = "Number one";
