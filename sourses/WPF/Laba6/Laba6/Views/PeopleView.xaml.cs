@@ -62,11 +62,34 @@ namespace Laba6.Views
 		{
 			//var person = _peopleViewModel.ChosenPerson;
 			var person = _peopleViewModelMVVM.ChosenPerson;
+			if (person is null) return;
 			person.Id = 1;
 			person.Name = "QUEEN";
 			person.Description = "Number one";
 			person.DateBorn = new DateTime(2024, 11, 11);
 		}
 
+		private void Begin_process(object sender, RoutedEventArgs e)
+		{
+			_peopleViewModelMVVM.BeginProcess();
+		}
+
+		private void Reset_process(object sender, RoutedEventArgs e)
+		{
+			_peopleViewModelMVVM.ResetProcess();
+		}
+
+		private void ListBox_MouseEnter(object sender, MouseEventArgs e)
+		{
+			if (sender is not ListBox lb) return;
+			lb.Background = Brushes.Red;
+		}
+
+		private void ListBox_MouseLeave(object sender, MouseEventArgs e)
+		{
+
+			if (sender is not ListBox lb) return;
+			lb.Background = Brushes.White;
+		}
 	}
 }

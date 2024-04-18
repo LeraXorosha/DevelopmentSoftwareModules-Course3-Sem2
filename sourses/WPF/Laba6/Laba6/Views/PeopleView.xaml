@@ -23,9 +23,11 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <ListBox Grid.Column="0" Grid.Row ="0" ItemsSource="{Binding People}" SelectedItem="{Binding ChosenPerson}">
+        <ListBox Grid.Column="0" Grid.Row ="0" ItemsSource="{Binding People}" SelectedItem="{Binding ChosenPerson}" 
+                 MouseEnter="ListBox_MouseEnter" MouseLeave="ListBox_MouseLeave">
             <ListBox.ItemTemplate >
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="5">
@@ -52,7 +54,9 @@
         <Button Grid.Column="0" Grid.Row="2" Content="Push new Item" Click="Push_new_Item"/>
         <Button Grid.Column="1" Grid.Row="1" Content="Change selected Item" Click="Change_selected_Item"/>
         <Button Grid.Column="1" Grid.Row="2" Content="Pop last Item" Click="Pop_last_Item" />
-        <Button Grid.Column="0" Grid.Row="3" Content="Begin process"/>
-        <Button Grid.Column="1" Grid.Row="3" Content="Reset process"/>
+        <Button Grid.Column="0" Grid.Row="3" Content="Begin process" Click="Begin_process"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Reset process" Click="Reset_process"/>
+
+        <ProgressBar Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"  Minimum="0" Maximum="100" Value="{Binding PercentDone}"/>
     </Grid>
 </Window>
