@@ -1,5 +1,4 @@
-﻿using Laba7.Models;
-using Laba7.Services;
+﻿using Laba7.Services;
 using Laba7.ViewModels;
 using Laba7.Views;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,13 +7,14 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Windows;
+using Laba7.Models.DataBase;
 
 namespace Laba7
 {
-	/// <summary>
-	/// Interaction logic for App.xaml
-	/// </summary>
-	public partial class App : Application
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
 	{
 		private void ConfigureServices(IServiceCollection services)
 		{

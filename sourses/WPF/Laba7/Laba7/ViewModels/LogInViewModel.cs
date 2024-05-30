@@ -8,5 +8,8 @@ namespace Laba7.ViewModels
 {
 	internal class LogInViewModel
 	{
+		public string Login { get; set; } = null!;
+		public string Password { get; set; } = null!;
+
 	}
 }
