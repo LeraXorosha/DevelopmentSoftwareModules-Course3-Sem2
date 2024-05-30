@@ -10,6 +10,7 @@
     <UserControl.DataContext>
         <ViewModels:ProductViewModel/>
     </UserControl.DataContext>
+    
     <UserControl.Resources>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="15"/>
