@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba7.Views"
         mc:Ignorable="d"
-        Title="SignInView" Height="200" Width="200">
+        Title="SignInView" Height="220" Width="200">
     <Grid>
         <StackPanel Margin="20">
             <TextBlock Text="Login:" />
@@ -13,7 +13,7 @@
 
             <TextBlock Text="Password:" />
             <PasswordBox Password="" />
-            
+
             <TextBlock Text="PasswordAgain:" />
             <PasswordBox Password="" />
 

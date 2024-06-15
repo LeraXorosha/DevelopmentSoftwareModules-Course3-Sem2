@@ -10,21 +10,9 @@ namespace Laba7.Services.Interfaces
 {
     public interface IAuthorizationService
     {
-		public User CurrentUser => throw new NotImplementedException();
-
-		public void LogIn(string login, string password)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void LogOut()
-		{
-			throw new NotImplementedException();
-		}
-
-		public void SignIn(string login, string password)
-		{
-			throw new NotImplementedException();
-		}
+		User CurrentUser { get; }
+		bool LogIn(string login, string password);
+		bool SignIn(string login, string password);
+		void LogOut();
 	}
 }

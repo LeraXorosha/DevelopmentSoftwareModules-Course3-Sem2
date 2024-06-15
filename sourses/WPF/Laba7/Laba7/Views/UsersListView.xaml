@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="UsersListView" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Список пользователей" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"  Grid.Row="0"/>
+
+        <ListView ItemsSource="{Binding Users}" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Логин" DisplayMemberBinding="{Binding Login}" Width="200"/>
+                    <GridViewColumn Header="Роль" DisplayMemberBinding="{Binding RoleName}" Width="200"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="Назад" Command="{Binding ReturnToUserInfoCommand}"  Grid.Row="2" Margin="100,10,100,10" FontSize="24"/>
     </Grid>
 </Window>

@@ -6,36 +6,12 @@ using System.Threading.Tasks;
 
 namespace Laba7.Models.DataBase.Entity
 {
-    public class Role : NotifyProperty
+    public class Role
     {
-		private int _id;
-		private string _name = null!;
+		public int Id { get; set; }
+		public string Name { get; set; } = string.Empty;
 
-		public int Id
-		{
-			get => _id;
-			set
-			{
-				if (_id != value)
-				{
-					_id = value;
-					OnPropertyChanged();
-				}
-			}
-		}
-
-		public string Name
-		{
-			get => _name;
-			set
-			{
-				if (_name != value)
-				{
-					_name = value;
-					OnPropertyChanged();
-				}
-			}
-		}
+		public virtual IEnumerable<User> Users { get; set; }
 
 	}
 }

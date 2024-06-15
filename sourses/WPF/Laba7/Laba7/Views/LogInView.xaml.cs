@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laba7.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,19 +12,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Laba7.ViewModels;
 
 namespace Laba7.Views
 {
 	/// <summary>
-	/// Логика взаимодействия для LoginWindow.xaml
+	/// Логика взаимодействия для LogInView.xaml
 	/// </summary>
-	public partial class LoginWindow : Window
+	public partial class LogInView : Window
 	{
-		public LoginWindow()
+		public LogInView()
 		{
 			InitializeComponent();
-			DataContext = new LoginWindow();
 		}
-	}
+    }
 }

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Laba7.Views
 {
 	/// <summary>
-	/// Логика взаимодействия для RigistrWindow.xaml
+	/// Логика взаимодействия для SignInView.xaml
 	/// </summary>
-	public partial class RigistrWindow : Window
+	public partial class SignInView : Window
 	{
-		public RigistrWindow()
+		public SignInView()
 		{
 			InitializeComponent();
 		}

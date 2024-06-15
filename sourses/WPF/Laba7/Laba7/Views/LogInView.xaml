@@ -4,18 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba7.Views"
+        xmlns:vm="clr-namespace:Laba7.ViewModels"
         mc:Ignorable="d"
         Title="LogInView" Height="220" Width="200">
     <Grid>
         <StackPanel Margin="20">
             <TextBlock Text="Login:" />
-            <TextBox Text="" />
+            <TextBox Text="{Binding Login}" />
 
             <TextBlock Text="Password:" />
-            <PasswordBox Password="" />
+            <TextBox Text ="{Binding Password}" />
 
-            <Button Content="Login" Margin="20,20,20,10"/>
-            <Button Content="Register" Margin="20,0,20,0"/>
+            <Button Content="Login" Command="{Binding LogInCommand}" Margin="20,20,20,10"/>
+            <Button Content="Register" Command="{Binding  OpenSignInCommand}" Margin="20,0,20,0"/>
         </StackPanel>
     </Grid>
 </Window>

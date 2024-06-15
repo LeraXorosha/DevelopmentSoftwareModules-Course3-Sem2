@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba7.Views"
         mc:Ignorable="d"
-        Title="UserInfoView" Height="450" Width="800">
+        Title="UserInfoView" Height="450" Width="562">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Профиль" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Grid.Column="1" Height="50" Width="136"/>
+
+        <TextBlock Text="Логин" Grid.Row="1" FontSize="24" Grid.ColumnSpan="3" Margin="140,0,140,32" Grid.RowSpan="2"/>
+        <TextBlock Text="{Binding Login}" Grid.Row="2" FontSize="24" Grid.ColumnSpan="3" Margin="140,0,140,32" Grid.RowSpan="2"/>
+        <TextBlock Text="Роль" Grid.Row="3" FontSize="24" Grid.ColumnSpan="3" Margin="140,0,140,16"/>
+        <TextBlock Text="{Binding RoleName}" Grid.Row="4" FontSize="24" Grid.ColumnSpan="3" Margin="140,0,140,101" Grid.RowSpan="2"/>
+
+        <Button Content="Выйти" Command="{Binding SignOutCommand}"  Grid.Row="5" Margin="0,0,0,0" FontSize="24" Grid.Column = "1"/>
+        <Button Content="Список пользователей" Command="{Binding OpenUsersListCommand}"  Grid.Row="6" Grid.Column="1" Margin="0,30,0,0" FontSize="24"/>
     </Grid>
 </Window>

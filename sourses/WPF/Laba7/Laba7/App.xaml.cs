@@ -8,6 +8,8 @@ using System.Configuration;
 using System.Data;
 using System.Windows;
 using Laba7.Models.DataBase;
+using Laba7.Services.Implementations;
+using Laba7.Services.Interfaces;
 
 namespace Laba7
 {
@@ -18,13 +20,20 @@ namespace Laba7
 	{
 		private void ConfigureServices(IServiceCollection services)
 		{
-			services.AddTransient<MainWindow>();
+			services.AddTransient<LogInView>();
+			services.AddTransient<SignInView>();
+			services.AddTransient<UserInfoView>();
+			services.AddTransient<UsersListView>();
+
 			services.AddTransient<LogInViewModel>();
 			services.AddTransient<SignInViewModel>();
 			services.AddTransient<UserInfoViewModel>();
 			services.AddTransient<UsersListViewModel>();
 
-			//services.AddScoped<IDbWorker, DbWorker>();
+			services.AddSingleton<IAuthorizationService, AuthorizationService>();
+			services.AddSingleton<IDbWorker, DbWorker>();
+			services.AddSingleton<IViewsManager, ViewsManager>();
+
 			services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data source=./laba7.db"));
 
 		}
