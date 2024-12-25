@@ -1,7 +1,7 @@
 ## Лабораборные работы
 
 ### WinForms labs
-1. [Лаба №1 Основы WinForms и Event-driven programming](sourses/laba1) 
+1. [Лаба №1 Основы WinForms и Event-driven programming](sourses/Laba1) 
 2. [Лаба №2 Dependency Injection, Полиморфизм и сервисы](labs/laba2)
 3. [Лаба №3 Практикуем DI+IoC+полиморфизм, Работа с DataGrid, DataBinding в WinForms](labs/laba3)
 ### Wpf labs
